@@ -22,14 +22,14 @@ icon.addEventListener('click',function(e){
 
   e.preventDefault();
 
-  box.addEventListener('touchmove', (e) => {
-    console.log('box capturing', e.eventPhase);
-  }, true)
+  // box.addEventListener('touchmove', (e) => {
+  //   console.log('box capturing', e.eventPhase);
+  // }, true)
 
-  content.addEventListener('touchmove', (e) => {
-    console.log('main capturing', e.eventPhase);
-    e.stopPropagation();
-  }, true)
+  // content.addEventListener('touchmove', (e) => {
+  //   console.log('main capturing', e.eventPhase);
+  //   e.stopPropagation();
+  // }, true)
 });
 
 
