@@ -4,24 +4,33 @@ let header = document.querySelector('.header');
 let content = document.querySelector('.main');
 let scrollTop;
 
-icon.addEventListener('click',function(){
+icon.addEventListener('click',function(e){
+
+  // console.log(window.pageYOffset)
+  // box.classList.toggle('show');
+  // header.classList.toggle('m_header');
+  // document.body.classList.toggle('body_fix');
+  // document.documentElement.classList.toggle('body_fix');
+
+  if(icon.classList.value === "icon close"){
+    handler();
+    openBody();
+    
+  }else{
+    lockBody();
+    handler();
+  }
+});
+
+function handler() {
   box.classList.toggle('show');
   header.classList.toggle('m_header');
   document.body.classList.toggle('body_fix');
   document.documentElement.classList.toggle('body_fix');
-
-  if(icon.classList.value === "icon close"){
-    icon.classList.remove('close');
-    openBody();
-  }else{
-    icon.classList.add('close');
-    lockBody();
-  }
-  e.preventDefault();
-});
+}
 
 function lockBody() {
-  console.log(window.pageYOffset)
+  icon.classList.add('close');
   if(window.pageYOffset) {
     scrollTop = window.pageYOffset;
     content.style.top = `${- (scrollTop)}px`;
@@ -29,7 +38,7 @@ function lockBody() {
 }
 
 function openBody() {
-  console.log('openB')
+  icon.classList.remove('close');
   content.style.top = '';
   window.scrollTo(0, scrollTop);
   // scrollTop = null;
