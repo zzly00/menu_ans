@@ -12,12 +12,12 @@ icon.addEventListener('click',function(){
 
   if(icon.classList.value === "icon close"){
     icon.classList.remove('close');
-    console.log('close')
     openBody();
   }else{
     icon.classList.add('close');
     lockBody();
   }
+  e.preventDefault();
 });
 
 function lockBody() {
@@ -32,7 +32,7 @@ function openBody() {
   console.log('openB')
   content.style.top = '';
   window.scrollTo(0, scrollTop);
-  scrollTop = null;
+  // scrollTop = null;
 }
 
 let boxLi = document.querySelectorAll('.box > Li');
