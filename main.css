@@ -20,7 +20,6 @@ html,body,ul{
     display: none;
     padding: 10px;
     width: 80%;
-    min-height: 101%;
 }
 
 .sub_box{
@@ -42,7 +41,7 @@ html,body,ul{
 
 .show{
   display: block;
-  /* min-height: 101%; */
+  min-height: 101%;
 }
 .ul_show{
   display: block;
@@ -55,6 +54,6 @@ html,body,ul{
 .m_header{
   height: 100%;
 }
-/* .main{
+.main{
   position: relative;
-} */
+}
