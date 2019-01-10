@@ -12,17 +12,28 @@ icon.addEventListener('click',function(){
 
   if(icon.classList.value === "icon close"){
     icon.classList.remove('close');
-    content.style.top = '';
-    window.scrollTo(0, scrollTop);
+    console.log('close')
+    openBody();
   }else{
     icon.classList.add('close');
-
-    if(window.pageYOffset) {
-      scrollTop = window.pageYOffset;
-      content.style.top = `${- (scrollTop)}px`;
-    }
+    lockBody();
   }
 });
+
+function lockBody() {
+  console.log(window.pageYOffset)
+  if(window.pageYOffset) {
+    scrollTop = window.pageYOffset;
+    content.style.top = `${- (scrollTop)}px`;
+  }
+}
+
+function openBody() {
+  console.log('openB')
+  content.style.top = '';
+  window.scrollTo(0, scrollTop);
+  scrollTop = null;
+}
 
 let boxLi = document.querySelectorAll('.box > Li');
 boxLi.forEach(function(item){
