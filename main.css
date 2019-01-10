@@ -8,7 +8,7 @@ html,body,ul{
   background-color: rgba(51,51,51,.4);
   min-height: 50px;
   width: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   overflow-y: auto;
@@ -41,7 +41,7 @@ html,body,ul{
 
 .show{
   display: block;
-  min-height: 101%;
+  min-height: 100%;
 }
 .ul_show{
   display: block;
