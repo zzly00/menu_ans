@@ -8,9 +8,8 @@ html,body,ul{
   background-color: rgba(51,51,51,.4);
   min-height: 50px;
   width: 100%;
-  position: fixed;
+  position: absolute;
   top: 0;
-  /* bottom: -1px; */
   left: 0;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
@@ -21,12 +20,6 @@ html,body,ul{
     display: none;
     padding: 10px;
     width: 80%;
-    outline: #f00 2px solid;
-    box-sizing: border-box;
-    border: black 5px solid;
-    /* min-height: 101%; */
-    position: relative;
-    top: -2px;
 }
 
 .sub_box{
@@ -59,8 +52,7 @@ html,body,ul{
   height: 100%;
 }
 .m_header{
-  height: 101%;
-  top: -5px;
+  height: 100%;
 }
 .main{
   position: relative;
