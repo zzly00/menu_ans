@@ -22,6 +22,21 @@ icon.addEventListener('click',function(e){
 
   e.preventDefault();
 
+  let startY,endY;
+  document.body.addEventListener('touchstart', function(e) {
+      startY = e.touches[0].pageY;
+  });
+  document.body.addEventListener('touchmove', function(e) {
+      endY = e.touches[0].pageY;
+      if(endY>startY && window.scrollTop()<=0){
+          e.preventDefault();
+      }
+    
+      if(endY<startY && window.scrollTop() + window.height()>=$('body')[0].scrollHeight){
+          e.preventDefault();
+      }
+  })
+
   // box.addEventListener('touchmove', (e) => {
   //   console.log('box capturing', e.eventPhase);
   // }, true)
