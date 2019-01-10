@@ -59,8 +59,8 @@ html,body,ul{
   height: 100%;
 }
 .m_header{
-  height: 100%;
-  bottom: -1px;
+  height: 101%;
+  top: -5px;
 }
 .main{
   position: relative;
