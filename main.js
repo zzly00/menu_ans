@@ -29,7 +29,9 @@ icon.addEventListener('click',function(e){
   document.documentElement.addEventListener('touchstart', (e) => {
     e.stopImmediatePropagation();
   }, true)
-
+  document.documentElement.addEventListener('touchmove', (e) => {
+    e.stopImmediatePropagation();
+  }, true)
 });
 
 
