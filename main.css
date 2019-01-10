@@ -4,7 +4,7 @@ html,body,ul{
   font-size: 30px;
 }
 .header{
-  color: #fff;
+  color: #aaa;
   background-color: rgba(51,51,51,.4);
   min-height: 50px;
   width: 100%;
@@ -13,12 +13,14 @@ html,body,ul{
   left: 0;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+  z-index: 1;
 }
 .box{
     list-style: none;
     display: none;
     padding: 10px;
     width: 80%;
+    min-height: 101%;
 }
 
 .sub_box{
@@ -39,8 +41,8 @@ html,body,ul{
 }
 
 .show{
-  display: inline-block;
-  min-height: 101%;
+  display: block;
+  /* min-height: 101%; */
 }
 .ul_show{
   display: block;
@@ -52,4 +54,7 @@ html,body,ul{
 }
 .m_header{
   height: 100%;
+}
+.main{
+  position: relative;
 }

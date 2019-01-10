@@ -23,13 +23,6 @@ icon.addEventListener('click',function(e){
   e.preventDefault();
 });
 
-// function handler() {
-//   box.classList.toggle('show');
-//   header.classList.toggle('m_header');
-//   document.body.classList.toggle('body_fix');
-//   document.documentElement.classList.toggle('body_fix');
-// }
-
 function lockBody() {
   if(window.pageYOffset) {
     scrollTop = window.pageYOffset;
