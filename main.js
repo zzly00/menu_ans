@@ -26,9 +26,10 @@ icon.addEventListener('click',function(e){
   //   console.log('box capturing', e.eventPhase);
   // }, true)
 
-  content.addEventListener('touchstart', (e) => {
+  document.documentElement.addEventListener('touchstart', (e) => {
     e.stopImmediatePropagation();
   }, true)
+
 });
 
 
