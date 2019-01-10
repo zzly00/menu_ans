@@ -9,7 +9,7 @@ html,body,ul{
   min-height: 50px;
   width: 100%;
   position: fixed;
-  top: -1px;
+  top: 0;
   /* bottom: -1px; */
   left: 0;
   overflow-y: auto;
@@ -60,6 +60,7 @@ html,body,ul{
 }
 .m_header{
   height: 100%;
+  bottom: -1px;
 }
 .main{
   position: relative;

@@ -26,12 +26,13 @@ icon.addEventListener('click',function(e){
   //   console.log('box capturing', e.eventPhase);
   // }, true)
 
-  document.documentElement.addEventListener('touchstart', (e) => {
-    e.stopImmediatePropagation();
-  }, true)
-  document.documentElement.addEventListener('touchmove', (e) => {
-    e.stopImmediatePropagation();
-  }, true)
+  // document.documentElement.addEventListener('touchstart', (e) => {
+  //   e.stopImmediatePropagation();
+  // }, true)
+  // document.documentElement.addEventListener('touchmove', (e) => {
+  //   e.stopImmediatePropagation();
+  // }, true)
+
 });
 
 
