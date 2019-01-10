@@ -13,6 +13,7 @@ html,body,ul{
   left: 0;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+  z-index: 1;
 }
 .box{
     list-style: none;
