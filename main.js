@@ -10,55 +10,13 @@ icon.addEventListener('click',function(e){
   document.body.classList.toggle('body_fix');
   document.documentElement.classList.toggle('body_fix');
 
-  if(icon.classList.value === "icon close"){
-    icon.classList.remove('close');
-    openBody();
-    
-  }else{
-    icon.classList.add('close');
-    lockBody();
-   
-  }
-
-  e.preventDefault();
-
-  let startY,endY;
-  document.body.addEventListener('touchstart', function(e) {
-      startY = e.touches[0].pageY;
-  });
-  document.body.addEventListener('touchmove', function(e) {
-      endY = e.touches[0].pageY;
-      if(endY>startY && window.scrollTop()<=0){
-          e.preventDefault();
-      }
-    
-      if(endY<startY && window.scrollTop() + window.height()>=$('body')[0].scrollHeight){
-          e.preventDefault();
-      }
-  })
-
-  // box.addEventListener('touchmove', (e) => {
-  //   console.log('box capturing', e.eventPhase);
-  // }, true)
-
-  // document.documentElement.addEventListener('touchstart', (e) => {
-  //   e.stopImmediatePropagation();
-  // }, true)
-  // document.documentElement.addEventListener('touchmove', (e) => {
-  //   e.stopImmediatePropagation();
-  // }, true)
-
-  // document.body.addEventListener('touchmove', function (e) {
-  //   e.preventDefault(); //阻止默认的处理方式(阻止下拉滑动的效果)
-  // }, {passive: false}); //passive 参数不能省略，用来兼容ios和android
-
+  icon.classList.value === "icon close"
+    ? openBody()
+    : lockBody()
 });
 
-
-
-
-
 function lockBody() {
+  icon.classList.add('close');
   if(window.pageYOffset) {
     scrollTop = window.pageYOffset;
     content.style.top = `${- (scrollTop)}px`;
@@ -66,9 +24,9 @@ function lockBody() {
 }
 
 function openBody() {
+  icon.classList.remove('close');
   content.style.top = '';
   window.scrollTo(0, scrollTop);
-  // scrollTop = null;
 }
 
 let boxLi = document.querySelectorAll('.box > Li');
